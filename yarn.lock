@@ -665,19 +665,6 @@ aproba@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.1.2.tgz#45c6629094de4e96f693ef7eab74ae079c240fc1"
 
-archiver@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/archiver/-/archiver-0.11.0.tgz#98177da7a6c0192b7f2798f30cd6eab8abd76690"
-  dependencies:
-    async "~0.9.0"
-    buffer-crc32 "~0.2.1"
-    glob "~3.2.6"
-    lazystream "~0.1.0"
-    lodash "~2.4.1"
-    readable-stream "~1.0.26"
-    tar-stream "~0.4.0"
-    zip-stream "~0.4.0"
-
 archy@^1.0.0, archy@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/archy/-/archy-1.0.0.tgz#f9c8c13757cc1dd7bc379ac77b2c62a5c2868c40"
@@ -1068,17 +1055,17 @@ binary@^0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-bl@^0.9.0, bl@~0.9.0:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/bl/-/bl-0.9.5.tgz#c06b797af085ea00bc527afc8efcf11de2232054"
-  dependencies:
-    readable-stream "~1.0.26"
-
 bl@^1.0.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/bl/-/bl-1.2.1.tgz#cac328f7bee45730d404b692203fcb590e172d5e"
   dependencies:
     readable-stream "^2.0.5"
+
+bl@~0.9.0:
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/bl/-/bl-0.9.5.tgz#c06b797af085ea00bc527afc8efcf11de2232054"
+  dependencies:
+    readable-stream "~1.0.26"
 
 bl@~1.1.2:
   version "1.1.2"
@@ -1183,10 +1170,6 @@ browserslist@^3.0.0:
   dependencies:
     caniuse-lite "^1.0.30000808"
     electron-to-chromium "^1.3.33"
-
-buffer-crc32@~0.2.1:
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
 
 buffer-from@^0.1.1:
   version "0.1.1"
@@ -1694,14 +1677,6 @@ component-emitter@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.2.1.tgz#137918d6d78283f7df7a6b7c5a63e140e69425e6"
 
-compress-commons@~0.1.0:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/compress-commons/-/compress-commons-0.1.6.tgz#0c740870fde58cba516f0ac0c822e33a0b85dfa3"
-  dependencies:
-    buffer-crc32 "~0.2.1"
-    crc32-stream "~0.3.1"
-    readable-stream "~1.0.26"
-
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -1801,13 +1776,6 @@ cp-file@^3.1.0:
     pinkie-promise "^2.0.0"
     readable-stream "^2.1.4"
 
-crc32-stream@~0.3.1:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/crc32-stream/-/crc32-stream-0.3.4.tgz#73bc25b45fac1db6632231a7bfce8927e9f06552"
-  dependencies:
-    buffer-crc32 "~0.2.1"
-    readable-stream "~1.0.24"
-
 create-error-class@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
@@ -1858,6 +1826,12 @@ cross-spawn@^6.0.4:
     semver "^5.5.0"
     shebang-command "^1.2.0"
     which "^1.2.9"
+
+cross-zip@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/cross-zip/-/cross-zip-2.1.5.tgz#c5d1a06a4b1a12a033064f946eb5ae6d4bdcf3e1"
+  dependencies:
+    rimraf "^2.5.2"
 
 cryptiles@0.2.x:
   version "0.2.2"
@@ -3510,13 +3484,6 @@ glob@^6.0.4:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@~3.2.6:
-  version "3.2.11"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-3.2.11.tgz#4a973f635b9190f715d10987d5c00fd2815ebe3d"
-  dependencies:
-    inherits "2"
-    minimatch "0.3"
-
 glob@~7.0.6:
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.0.6.tgz#211bafaf49e525b8cd93260d14ab136152b3f57a"
@@ -4635,12 +4602,6 @@ lazy-property@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lazy-property/-/lazy-property-1.0.0.tgz#84ddc4b370679ba8bd4cdcfa4c06b43d57111147"
 
-lazystream@~0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/lazystream/-/lazystream-0.1.0.tgz#1b25d63c772a4c20f0a5ed0a9d77f484b6e16920"
-  dependencies:
-    readable-stream "~1.0.2"
-
 lcid@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-1.0.0.tgz#308accafa0bc483a3867b4b6f2b9506251d1b835"
@@ -4852,10 +4813,6 @@ lodash@^4.0.0, lodash@^4.1.0, lodash@^4.13.0, lodash@^4.14.0, lodash@^4.16.2, lo
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
-lodash@~2.4.1:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-2.4.2.tgz#fadd834b9683073da179b3eae6d9c0d15053f73e"
-
 log-driver@^1.2.5:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/log-driver/-/log-driver-1.2.6.tgz#ad0e660f56bbc59aeb2784d92854cdfdac55807b"
@@ -4892,10 +4849,6 @@ loud-rejection@^1.0.0:
 lowercase-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.0.tgz#4e3366b39e7f5457e35f1324bdf6f88d0bfc7306"
-
-lru-cache@2:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-2.7.3.tgz#6d4524e8b955f95d4f5b58851ce21dd72fb4e952"
 
 lru-cache@^4.0.0, lru-cache@^4.0.1, lru-cache@^4.1.1, lru-cache@~4.1.1:
   version "4.1.1"
@@ -5090,13 +5043,6 @@ mime@~1.2.11:
 mimic-fn@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
-
-minimatch@0.3:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-0.3.0.tgz#275d8edaac4f1bb3326472089e7949c8394699dd"
-  dependencies:
-    lru-cache "2"
-    sigmund "~1.0.0"
 
 "minimatch@2 || 3", minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@^3.0.4, minimatch@~3.0.3:
   version "3.0.4"
@@ -6492,7 +6438,7 @@ readable-stream@1.1:
     isarray "0.0.1"
     string_decoder "~0.10.x"
 
-readable-stream@^1.0.27-1, readable-stream@^1.1.8, readable-stream@~1.1.10, readable-stream@~1.1.9:
+readable-stream@^1.1.8, readable-stream@~1.1.10, readable-stream@~1.1.9:
   version "1.1.14"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
@@ -6513,7 +6459,7 @@ readable-stream@^2.0.2, readable-stream@^2.0.6, readable-stream@^2.1.4, readable
     string_decoder "~1.0.3"
     util-deprecate "~1.0.1"
 
-readable-stream@~1.0.2, readable-stream@~1.0.24, readable-stream@~1.0.26:
+readable-stream@~1.0.26:
   version "1.0.34"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
   dependencies:
@@ -7082,10 +7028,6 @@ shelljs@^0.7.5:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
-sigmund@~1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/sigmund/-/sigmund-1.0.1.tgz#3ff21f198cad2175f9f3b781853fd94d0d19b590"
-
 signal-exit@^3.0.0, signal-exit@^3.0.1, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
@@ -7549,15 +7491,6 @@ tar-stream@^1.1.2, tar-stream@^1.5.4:
     readable-stream "^2.0.0"
     xtend "^4.0.0"
 
-tar-stream@~0.4.0:
-  version "0.4.7"
-  resolved "https://registry.yarnpkg.com/tar-stream/-/tar-stream-0.4.7.tgz#1f1d2ce9ebc7b42765243ca0e8f1b7bfda0aadcd"
-  dependencies:
-    bl "^0.9.0"
-    end-of-stream "^1.0.0"
-    readable-stream "^1.0.27-1"
-    xtend "^4.0.0"
-
 tar@^2.0.0, tar@^2.2.1, tar@~2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/tar/-/tar-2.2.1.tgz#8e4d2a256c0e2185c6b18ad694aec968b83cb1d1"
@@ -7623,7 +7556,7 @@ timed-out@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
 
-tmp-promise@^1.0.3:
+tmp-promise@^1.0.3, tmp-promise@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/tmp-promise/-/tmp-promise-1.0.4.tgz#cfe2131b78392992e756d8692a059dc4b48be7ac"
   dependencies:
@@ -8441,17 +8374,3 @@ yauzl@2.4.1:
   resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.4.1.tgz#9528f442dab1b2284e58b4379bb194e22e0c4005"
   dependencies:
     fd-slicer "~1.0.1"
-
-zip-folder@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/zip-folder/-/zip-folder-1.0.0.tgz#70a7744fd1789a2feb41ad3419b32e9fd87957b2"
-  dependencies:
-    archiver "^0.11.0"
-
-zip-stream@~0.4.0:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/zip-stream/-/zip-stream-0.4.1.tgz#4ea795a8ce19e9fab49a31d1d0877214159f03a3"
-  dependencies:
-    compress-commons "~0.1.0"
-    lodash "~2.4.1"
-    readable-stream "~1.0.26"

@@ -3,6 +3,7 @@ import asar from 'asar';
 import fs from 'fs-extra';
 import os from 'os';
 import path from 'path';
+import tmp from 'tmp-promise';
 
 import chai, { expect } from 'chai';
 import proxyquire from 'proxyquire';
@@ -304,8 +305,18 @@ describe(`electron-forge API (with installer=${nodeInstaller})`, () => {
       const goodMakers = getMakers(true);
       const badMakers = getMakers(false);
 
+      const testUnzipFile = async artifacts =>
+        await tmp.withDir((tempDir) => {
+          for (const zipPath of artifacts) {
+            if (process.platform !== 'win32') {
+              execSync(`unzip "${zipPath}" -d "${tempDir.path}"`);
+            }
+          }
+        });
+
       const testMakeTarget = function testMakeTarget(target, shouldPass, ...options) {
-        describe(`make (with target=${path.basename(target().name)})`, async () => {
+        const targetName = path.basename(target().name);
+        describe(`make (with target=${targetName})`, async () => {
           before(async () => {
             const packageJSON = await readPackageJSON(dir);
             packageJSON.config.forge.makers = [target()];
@@ -319,6 +330,9 @@ describe(`electron-forge API (with installer=${nodeInstaller})`, () => {
                 for (const outputResult of outputs) {
                   for (const output of outputResult.artifacts) {
                     expect(await fs.exists(output)).to.equal(true);
+                  }
+                  if (targetName === 'zip') {
+                    await testUnzipFile(outputResult.artifacts);
                   }
                 }
               });

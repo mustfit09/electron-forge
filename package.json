@@ -95,7 +95,8 @@
     "nodemon": "^1.11.0",
     "nyc": "^11.0.0",
     "proxyquire": "^1.7.10",
-    "sinon": "^4.1.2"
+    "sinon": "^4.1.2",
+    "tmp-promise": "^1.0.4"
   },
   "optionalDependencies": {
     "electron-installer-debian": "^0.8.0",
