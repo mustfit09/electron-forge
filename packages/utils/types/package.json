@@ -1,11 +1,12 @@
 {
-  "name": "@electron-forge/async-ora",
+  "name": "@electron-forge/shared-types",
   "version": "6.0.0-beta.3",
-  "description": "A helper utility for wrapping async functions in an ora",
+  "description": "Shared types across forge",
   "repository": "https://github.com/electron-userland/electron-forge",
   "author": "Samuel Attard",
   "license": "MIT",
   "main": "dist/index.js",
+  "typings": "index.d.ts",
   "scripts": {
     "test": "mocha test/**/*_spec.js test/**/**/*_spec.js --opts ../../../mocha.opts"
   },
