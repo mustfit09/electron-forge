@@ -21,7 +21,8 @@
     "cross-spawn": "^6.0.4",
     "fs-extra": "^5.0.0",
     "parse-author": "^2.0.0",
-    "pify": "^3.0.0"
+    "pify": "^3.0.0",
+    "source-map-support": "^0.5.4"
   },
   "optionalDependencies": {
     "electron-installer-dmg": "^0.2.0",
